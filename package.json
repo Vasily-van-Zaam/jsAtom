@@ -1,0 +1,16 @@
+{
+  "name" : "jsAtom",
+  "version" : "0.0.1",
+  "dependencies" : {
+    "express" : "3.3.1",
+    "vow" : "0.4.10",
+    "vow-fs" : "0.3.3",
+    "mongodb" : "2.0",
+    "mu2" : "0.5.20"
+  },
+  "description" : "js cms ",
+  "repository" : {
+    "type" : "git",
+    "url" : "git@github.com:Vasily-van-Zaam/jsAtom.git"
+  }
+}
