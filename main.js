@@ -4,10 +4,11 @@
 (function(){
     var express         = require("express");
     var path            = require("path");
-    var IM               = require("immutable");
+    var IM              = require("immutable");
+    var init            = require("./init");
 
 
-    IM.Map.isMap([]);
+
     
     var app = express();
 
@@ -19,28 +20,33 @@
     app.use(express.methodOverride()); // поддержка put и delete
     app.use(app.router); // модуль для простого задания обработчиков путей
 
-    app.get('/api', function (req, res) {
-        res.send('<script src="lib/immutable/immutable.min.js"></script><form method="post"> text <input name="name" type="text"> Enter<input type="submit">');
+    /*console.log(app.get('/api', function (req, res) {
+        if (!res.send(
+                '<script src="lib/immutable/immutable.min.js">' +
+                '</script><form method="post"> ' +
+                'text <input name="name" type="text"> Enter<input type="submit">' +
+                '<p> jsAtom:' + ' rrr: ' + jsAtom.plugins.admin.action() + '</p>')) {
+
+        }
+    }));*/
+
+
+    app.get('/test', function(req, res){
+
+        res.send("test");
+
+    });
+    app.get('/*', function(req, res){
+
+        res.send("QQQQQQQQQQ");
+
     });
 
 
-    var printObject = function (data) {
-
-
-    };
-
-    var doc = {
-        a : "a",
-        b : "b",
-        c : {
-            d : "d",
-            e : "e"
-        }
-    };
-
     app.post('/api', function (req, res) {
         var set = [];
-        for(var key in req){set.push('<p>' + key + ": " + req[key] + '</p> </br>')}
+        var v = global;
+        for(var key in v){set.push('<p>' + key + ": " + v[key] + '</p> </br>')}
 
         res.send('Result:' + set)
     });
