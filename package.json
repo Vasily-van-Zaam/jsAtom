@@ -6,7 +6,8 @@
     "vow" : "0.4.10",
     "vow-fs" : "0.3.3",
     "mongodb" : "2.0",
-    "mu2" : "0.5.20"
+    "mu2" : "0.5.20",
+    "immutable" : "3.7.5"
   },
   "description" : "js cms ",
   "repository" : {
