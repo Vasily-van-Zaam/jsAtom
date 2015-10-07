@@ -4,6 +4,7 @@
 (function (){
 
     var initConfig = {
+
         plugins: {
             admin: "./plugins/admin/main",
             store: "./plugins/store/main"
